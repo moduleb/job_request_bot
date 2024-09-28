@@ -1,0 +1,14 @@
+[Unit]
+Description=Job Request Bot
+After=network.target
+
+[Service]
+User=a
+WorkingDirectory=/home/a/job_request_bot
+EnvironmentFile=/home/a/job_request_bot/.env
+ExecStart=/home/a/job_request_bot/.venv/bin/python /home/a/job_request_bot/run.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
